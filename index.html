@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Modern Smooth Portfolio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+  /* Reset & base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Container */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  header {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #2c2c2c;
+    user-select: none;
+  }
+  header h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+    color: #00ffd5;
+    transition: color 0.3s ease;
+  }
+  header h1:hover {
+    color: #00b3a6;
+  }
+  header p {
+    margin-top: 0.5rem;
+    font-weight: 300;
+    color: #757575;
+    font-style: italic;
+  }
+
+  nav {
+    margin: 3rem 0 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    user-select: none;
+  }
+  nav a {
+    color: #9e9e9e;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+  nav a:hover,
+  nav a.active {
+    color: #00ffd5;
+    border-color: #00ffd5;
+  }
+
+  section {
+    margin-bottom: 5rem;
+  }
+  section h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid #00ffd5;
+    padding-left: 0.7rem;
+    color: #00ffd5;
+    font-weight: 600;
+  }
+  section p {
+    line-height: 1.6;
+    color: #cfcfcf;
+    font-weight: 300;
+  }
+
+  /* Projects grid */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.75rem;
+  }
+  .project-card {
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 6px 15px rgba(0,255,213,0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,255,213,0.3);
+  }
+  .project-card h3 {
+    color: #00ffd5;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  .project-card p {
+    color: #9e9e9e;
+    font-weight: 300;
+    flex-grow: 1;
+  }
+  .project-card a {
+    margin-top: 1rem;
+    color: #00ffd5;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+    transition: border-color 0.3s ease;
+    align-self: flex-start;
+  }
+  .project-card a:hover {
+    border-color: #00b3a6;
+  }
+
+  /* About & Contact */
+  .about, .contact {
+    user-select: text;
+  }
+  .contact a {
+    color: #00ffd5;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  .contact a:hover {
+    border-color: #00b3a6;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid #2c2c2c;
+    color: #606060;
+    font-size: 0.9rem;
+    user-select: none;
+  }
+
+  /* Responsive Fixes for Smaller Screens */
+  @media (max-width: 600px) {
+    .projects {
+      grid-template-columns: 1fr;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    nav {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Modern Portfolio</h1>
+      <p>Creative. Smooth. Versatile.</p>
+    </header>
+
+    <nav>
+      <a href="#projects" class="active">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="project-card">
+          <h3>Responsive Website</h3>
+          <p>A sleek, dark-themed responsive website design that adapts seamlessly to any device.</p>
+          <a href="#" target="_blank" rel="noopener">View Project</a>
+        </article>
+        <article class="project-card">
+          <h3>JavaScript Game</h3>
+          <p>Fun and engaging browser game with smooth animations and intuitive controls.</p>
+          <a href="#" target="_blank" rel="noopener">View Project</a>
+        </article>
+        <article class="project-card">
+          <h3>UI Component Library</h3>
+          <p>Reusable modern UI components built for speed and flexibility in web development.</p>
+          <a href="#" target="_blank" rel="noopener">View Project</a>
+        </article>
+        <article class="project-card">
+          <h3>Portfolio CMS</h3>
+          <p>Content management system tailored for personal portfolios with easy customization.</p>
+          <a href="#" target="_blank" rel="noopener">View Project</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm a passionate web developer designing smooth, modern, and dark-themed digital experiences. I specialize in crafting fully responsive sites, interactive JavaScript applications, and clean UI components tailored for diverse needs.</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>If you want to get in touch for collaboration or projects, feel free to reach out:</p>
+      <p>Email: <a href="mailto:hello@modernportfolio.com">hello@modernportfolio.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/modernportfolio" target="_blank" rel="noopener">linkedin.com/in/modernportfolio</a></p>
+    </section>
+
+    <footer>
+      &copy; 2024 Modern Portfolio. All rights reserved.
+    </footer>
+  </div>
+
+<script>
+  // Smooth scroll nav active link update on scroll
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 60;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+
+  // Smooth scroll on nav click for older browsers
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').slice(1);
+      const target = document.getElementById(targetId);
+      if(target){
+        window.scrollTo({
+          top: target.offsetTop - 50,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+</body>
+</html>
+
+```
